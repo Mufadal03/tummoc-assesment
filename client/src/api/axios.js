@@ -1,8 +1,8 @@
 import axios from 'axios'
 
 const customAxios = axios.create({
-    baseURL: "http://localhost:8000",
-    // baseURL: 'https://pococare-seven.vercel.app'
+    // baseURL: "http://localhost:8000",
+    baseURL: 'https://tummoc-assesment.vercel.app'
 
 })
 
