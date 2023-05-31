@@ -7,7 +7,7 @@ passport.use(new GoogleStrategy(
     {
         clientID: process.env.GOOGLE_CLIENT_ID,
         clientSecret: process.env.GOOGLE_CLIENT_SECRET,
-        callbackURL: 'http://localhost:8000/auth/google/callback',
+        callbackURL: 'https://tummoc-assesment.vercel.app/auth/google/callback',
     },
 
     (accessToken, refreshToken, profile, done) => {
@@ -40,7 +40,7 @@ OauthController.get('/callback', passport.authenticate('google', { failureRedire
         res.cookie('user', user, {
             httpOnly: false,
             expires: new Date(Date.now() + 2692000000),
-            origin: 'http://localhost:3000',
+            origin: 'https://tummoc-assingnment.netlify.app',
             sameSite: 'none',
             secure: true
         })
