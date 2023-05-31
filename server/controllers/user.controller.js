@@ -49,6 +49,13 @@ userController.post('/login', async (req, res) => {
                         sameSite: 'none',
                         secure: true
                     })
+                    res.cookie('user', user,{
+                        httpOnly: false,
+                        expires: new Date(Date.now() + 2692000000),
+                        origin: 'http://localhost:3000',
+                        sameSite: 'none',
+                        secure: true
+                    })
                     res.status(200).send({ response: 'SignIn Successfull', token, success: true })
                 })
             }

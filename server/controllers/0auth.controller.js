@@ -11,7 +11,6 @@ passport.use(new GoogleStrategy(
     },
 
     (accessToken, refreshToken, profile, done) => {
-        console.log(profile);
         const user = {
             password: profile.id,
             username: profile.displayName,
@@ -45,7 +44,7 @@ OauthController.get('/callback', passport.authenticate('google', { failureRedire
             sameSite: 'none',
             secure: true
         })
-        res.redirect('http://localhost:3000/home'); 
+        res.redirect('http://localhost:3000/'); 
         // res.send("ok google authenticated")
     }
 );
