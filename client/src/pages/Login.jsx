@@ -32,7 +32,7 @@ const Login = () => {
               <Input onChange={handleChange} name='email' type='email' placeholder='Enter email' />
               <Input onChange={handleChange} name='password' type='password' placeholder='Enter password' />
               <Button onClick={handleSubmit} w='100%' colorScheme={'facebook'}>Login</Button>
-             <Link href='http://localhost:8000/auth/google'> <Button w='100' color='black' bgColor={'white'}>login with google</Button></Link>
+             <Link href='https://tummoc-assesment.vercel.app/auth/google'> <Button w='100' color='black' bgColor={'white'}>login with google</Button></Link>
               <HStack>
                   <Text>Dont have an account?</Text>
                   <Link to='/signup'>signup</Link>
