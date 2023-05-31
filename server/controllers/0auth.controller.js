@@ -44,7 +44,7 @@ OauthController.get('/callback', passport.authenticate('google', { failureRedire
             sameSite: 'none',
             secure: true
         })
-        res.redirect('http://localhost:3000/'); 
+        res.redirect('https://tummoc-assingnment.netlify.app/'); 
         // res.send("ok google authenticated")
     }
 );
